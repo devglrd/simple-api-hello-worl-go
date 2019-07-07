@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  go-api:
+    image: go-lang:latest
+    build:
+      context: ./
+    container_name: go-api
+    volumes:
+      - ./src:/go/src/app
+    working_dir: /go/src/app
+    ports:
+      - "3030:8080"
